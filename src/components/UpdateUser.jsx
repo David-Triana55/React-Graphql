@@ -1,8 +1,7 @@
 import { useMutation } from "@apollo/client";
 import { Button, TextField } from "@mui/material";
 import { useState } from "react";
-import { CREATE_PERSON, UPDATE_PERSON } from "../queries";
-import { ALL_PERSONS } from "./PersonList";
+import { ALL_PERSONS, CREATE_PERSON, UPDATE_PERSON } from "../queries";
 
 export function UpdateUser({ method, info, setModal }) {
 	const [data, setData] = useState({
@@ -48,6 +47,7 @@ export function UpdateUser({ method, info, setModal }) {
 				city: formData.get("city"),
 			},
 		});
+		setTimeout(() => {}, 1000);
 		setModal(false);
 	};
 

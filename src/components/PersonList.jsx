@@ -38,13 +38,14 @@ export const PersonList = ({ modal, setModal, setMethod, setInfo }) => {
 	};
 
 	return (
-		<div className="mx-auto max-w-2xl">
+		<div className="mx-auto max-w-4xl">
 			<TableContainer component={Paper}>
 				<Table aria-label="simple table">
 					<TableHead>
 						<TableRow>
 							<TableCell>Name</TableCell>
 							<TableCell align="center">Phone</TableCell>
+							<TableCell align="center">Street</TableCell>
 							<TableCell align="center">City</TableCell>
 							<TableCell align="center">Edit</TableCell>
 							<TableCell align="center">Delete</TableCell>
@@ -59,6 +60,8 @@ export const PersonList = ({ modal, setModal, setMethod, setInfo }) => {
 								<TableCell align="right">
 									{person.phone === null ? "No phone" : person.phone}
 								</TableCell>
+								<TableCell align="right">{person.address.street}</TableCell>
+
 								<TableCell align="right">{person.address.city}</TableCell>
 								<TableCell align="right">
 									<button
@@ -90,6 +93,7 @@ export const PersonList = ({ modal, setModal, setMethod, setInfo }) => {
 									Add new person
 								</button>
 							</TableCell>
+							<TableCell />
 							<TableCell />
 							<TableCell />
 							<TableCell />
